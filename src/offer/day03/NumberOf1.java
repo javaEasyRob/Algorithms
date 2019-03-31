@@ -20,9 +20,9 @@ package offer.day03;
  * 整数的二进制有多少个1，就可以进行多少次这样的操作。
  * </p>
  *
- * @author 辛江勇<br>
+ * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
+ * @date 2018/10/20 20:45
  */
 public class NumberOf1 {
     public int numberOf1(int target) {

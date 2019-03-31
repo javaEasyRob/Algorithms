@@ -8,9 +8,9 @@ package offer.day01;
  * 例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
  * </p>
  *
- * @author 辛江勇<br>
+ * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
+ * @date 2018/10/20 20:45
  */
 public class ReplaceSpace {
     public String replaceSpace(StringBuffer str) {

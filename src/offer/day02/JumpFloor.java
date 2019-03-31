@@ -8,9 +8,9 @@ package offer.day02;
  * 思路<br>
  * 如果跳一级则还剩f(n-1)，同理跳两级还剩f(n-2)，故有f(n)=f(n-1)+f(n-2)<br>
  *
- * @author 辛江勇<br>
- * @version 1.0.0<br>
- * @date 2018/10/20 20:45<br>
+ * @author 辛江勇
+ * @version 1.0.0
+ * @date 2018/10/20 20:45
  */
 public class JumpFloor {
     public int jumpFloor(int target) {

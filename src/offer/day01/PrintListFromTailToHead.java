@@ -8,9 +8,9 @@ import java.util.Stack;
  * Function <br>
  * Day01-从尾到头打印链表<br>
  *
- * @author 辛江勇<br>
+ * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
+ * @date 2018/10/20 20:45
  */
 public class PrintListFromTailToHead {
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {

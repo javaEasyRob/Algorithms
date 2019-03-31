@@ -5,9 +5,9 @@ package offer.day04;
  * Function <br>
  * 要求偶数和奇数的相对位置没有发生改变
  *
- * @author 辛江勇<br>
+ * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
+ * @date 2018/10/20 20:45
  */
 public class ReOrderArray1 {
     public void reOrderArray(int[] array) {

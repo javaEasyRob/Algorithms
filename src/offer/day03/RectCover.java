@@ -8,9 +8,9 @@ package offer.day03;
  * 请问用n个2*1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？</p>
  * 解题思路
  *
- * @author 辛江勇<br>
+ * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
+ * @date 2018/10/20 20:45
  */
 public class RectCover {
     public int rectCover(int target) {

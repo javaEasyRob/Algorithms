@@ -10,9 +10,9 @@ package offer.day02;
  * 请返回0。
  * </p>
  *
- * @author 辛江勇<br>
+ * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
+ * @date 2018/10/20 20:45
  */
 public class MinNumberInRotateArray {
     public int minNumberInRotateArray(int[] array) {
@@ -43,13 +43,12 @@ public class MinNumberInRotateArray {
     }
 
     private int findMin(int[] numbers, int low, int high) {
-        int i = high;
-        for (i = high; i > low; i--) {
-            if (numbers[i - 1] > numbers[i]) {
+        for (; high > low; high--) {
+            if (numbers[high - 1] > numbers[high]) {
                 break;
             }
         }
-        return numbers[i];
+        return numbers[high];
     }
 
     public static void main(String[] args) {

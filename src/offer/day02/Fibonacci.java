@@ -5,9 +5,9 @@ package offer.day02;
  * Function <br>
  * 斐波那契数列
  *
- * @author 辛江勇<br>
+ * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
+ * @date 2018/10/20 20:45
  */
 public class Fibonacci {
     public int fibonacci(int n) {

@@ -6,16 +6,16 @@ package offer.day04;
  * 题目描述<br>
  * 输入一个链表，反转链表后，输出新链表的表头。<br>
  *
- * @author 辛江勇<br>
+ * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
+ * @date 2018/10/20 20:45
  */
 public class ReverseList {
     public ListNode reverseList(ListNode head) {
         if (head == null) {
             return null;
         }
-        ListNode next = null;
+        ListNode next ;
         ListNode pre = null;
         while (head != null) {
             next = head.next;//暂存当前元素的下一个结点

@@ -12,9 +12,9 @@ package offer.day04;
  * 所在位置就是倒数第k个节点了。
  * </p>
  *
- * @author 辛江勇<br>
+ * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
+ * @date 2018/10/20 20:45
  */
 public class FindKthToTail {
     public ListNode findKthToTail(ListNode head, int k) {

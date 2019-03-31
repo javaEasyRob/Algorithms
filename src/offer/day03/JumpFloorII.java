@@ -38,9 +38,9 @@ package offer.day03;
  *               | 2*f(n-1),(n>=2)
  * </p>
  *
- * @author 辛江勇<br>
+ * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
+ * @date 2018/10/20 20:45
  */
 public class JumpFloorII {
     public int jumpFloorII(int target) {

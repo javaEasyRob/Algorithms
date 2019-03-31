@@ -5,9 +5,9 @@ package offer.day04;
  * Function <br>
  * 输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。<br>
  *
- * @author 辛江勇<br>
+ * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
+ * @date 2018/10/20 20:45
  */
 public class MergeLink {
     public ListNode merge(ListNode list1, ListNode list2) {
