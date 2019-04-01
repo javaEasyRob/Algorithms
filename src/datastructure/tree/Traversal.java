@@ -109,7 +109,7 @@ public class Traversal {
 
     /**
      * 测试遍历方法。
-     * 1
+     *  1
      * / \
      * 2   3
      * /\  /\
@@ -132,5 +132,6 @@ public class Traversal {
         Traversal traversal = new Traversal();
         traversal.levelTraversal(node1);
         traversal.postOrderTraversal(node1);
+        Examples examples = new Examples();
     }
 }
