@@ -8,6 +8,7 @@ import java.util.Stack;
 /**
  * ClassName Traversal<br>
  * Function <br>
+ * 树的各种遍历方法<br>
  *
  * @author 辛江勇
  * @version 1.0.0
@@ -52,6 +53,36 @@ public class Traversal {
     }
 
     /**
+     * 非递归后序遍历。
+     *
+     * @param root 待遍历的根结点
+     */
+    public void postOrderTraversal(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode lastVisit = root;
+        while (root != null || !stack.isEmpty()) {
+            if (root != null) {
+                stack.push(root);
+                root = root.left;
+                continue;
+            }
+            root = stack.peek();
+            //第三次访问
+            if (root.right == null || root.right == lastVisit) {
+                System.out.println(root.val);
+                lastVisit = root;
+                stack.pop();
+                root = null;
+            } else {
+                root = root.right;
+            }
+        }
+    }
+
+    /**
      * 使用队列实现的层次遍历
      *
      * @param root 待遍历树的根节点
@@ -78,11 +109,11 @@ public class Traversal {
 
     /**
      * 测试遍历方法。
-     *          1
-     *         / \
-     *        2   3
-     *       /\  /\
-     *      4 5 6 7
+     * 1
+     * / \
+     * 2   3
+     * /\  /\
+     * 4 5 6 7
      */
     public static void main(String[] args) {
         TreeNode node1 = new TreeNode(1);
@@ -100,6 +131,6 @@ public class Traversal {
         node3.right = node7;
         Traversal traversal = new Traversal();
         traversal.levelTraversal(node1);
-        traversal.inOrderTraversal(node1);
+        traversal.postOrderTraversal(node1);
     }
 }
