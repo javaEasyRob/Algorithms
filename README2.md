@@ -1,4 +1,4 @@
-# dataStructure (use Java)
+# dataStructure (Java implementation)
 ## tree
 <ul>
   <li>树的三种遍历方式-递归实现</li>
