@@ -132,6 +132,6 @@ public class Traversal {
         Traversal traversal = new Traversal();
         traversal.levelTraversal(node1);
         traversal.postOrderTraversal(node1);
-        Examples examples = new Examples();
+        SomeBinaryTreeProblems someBinaryTreeProblems = new SomeBinaryTreeProblems();
     }
 }

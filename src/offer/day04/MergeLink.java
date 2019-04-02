@@ -18,7 +18,7 @@ public class MergeLink {
             if (list1.val < list2.val) {
                 //指向下一個
                 newList.next = list1;
-                //移动指针，将下当前指向下一个。
+                //移动指针
                 newList = list1;
                 list1 = list1.next;
             } else {

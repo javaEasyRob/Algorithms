@@ -18,10 +18,14 @@ public class ReverseList {
         ListNode next ;
         ListNode pre = null;
         while (head != null) {
-            next = head.next;//暂存当前元素的下一个结点
-            head.next = pre;//将当前元素得指向反向
-            pre = head;//记录当前元素
-            head = next;//移动元素
+            //暂存当前元素的下一个结点
+            next = head.next;
+            //将当前元素得指向反向
+            head.next = pre;
+            //记录当前元素
+            pre = head;
+            //移动元素
+            head = next;
         }
         return pre;
     }

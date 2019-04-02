@@ -3,18 +3,20 @@ package datastructure.tree;
 import datastructure.wheel.TreeNode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
- * ClassName Examples<br>
+ * ClassName SomeBinaryTreeProblems<br>
  * Function <br>
- * 一些关于树的常见操作<br>
+ * 一些关于二叉树的常见操作<br>
  *
  * @author 辛江勇
  * @version 1.0.0
  * @date 2018/10/20 20:45
  */
-public class Examples {
+public class SomeBinaryTreeProblems {
     /**
      * 递归形式返回指定结点的深度
      *
@@ -95,20 +97,34 @@ public class Examples {
     }
 
     /**
-     * <p>
-     * 返回二叉搜索树的最小节点（二叉搜索树：非空左子树的所有键值小于根结点，飞控右子树的所有键值大于根节点，
-     * 左右子树都是二叉搜索树）
-     * </p>
+     * 给出二叉树的前序和中序遍历，构建二叉树。
      *
-     * @param root 二叉树的根结点
-     * @return 返回最小元素所在的结点
+     * @param pre 前序遍历序列
+     * @param in  中序遍历序列
      */
-    public TreeNode getMin(TreeNode root) {
-        TreeNode pre = root;
-        while (root != null) {
-            pre = root;
-            root = root.left;
+    public TreeNode reConstructBinaryTree(int[] pre, int[] in) {
+        if (pre.length != in.length) {
+            return null;
         }
-        return pre;
+        Map<Integer, Integer> map = new HashMap<>(in.length);
+        //快速得到元素的索引
+        int i = 0;
+        for (int number : in) {
+            map.put(number, i++);
+        }
+        return reConstructBinaryTree(pre, 0, pre.length - 1, in, 0, in.length - 1, map);
+    }
+
+    private TreeNode reConstructBinaryTree(int[] pre, int preStart, int preEnd, int[] in, int inStart, int inEnd, Map<Integer, Integer> map) {
+        if (preEnd < preStart) {
+            return null;
+        }
+        TreeNode root = new TreeNode(pre[preStart]);
+        //根节点元素在中序序列中的位置
+        int index = map.get(pre[preStart]);
+        int leftLength = index - inStart;
+        root.left = reConstructBinaryTree(pre, preStart + 1, preStart + leftLength, in, inStart, index - 1, map);
+        root.right = reConstructBinaryTree(pre, preStart + leftLength + 1, preEnd, in, index + 1, inEnd, map);
+        return root;
     }
 }

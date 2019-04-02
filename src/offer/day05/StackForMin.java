@@ -18,8 +18,9 @@ public class StackForMin {
     Stack<Integer> s1 = new Stack<>();
     Stack<Integer> s2 = new Stack<>();
 
-    //小的入s2栈
+
     public void push(int node) {
+        //s1正常入栈，s2作为辅助栈，小的入栈。
         s1.push(node);
         if (s2.isEmpty()) {
             s2.push(node);
@@ -28,8 +29,9 @@ public class StackForMin {
         }
     }
 
-    //出栈同步，将重复的剔除。
+
     public void pop() {
+        //s1出栈，如果辅助栈中也有该元素，则一起同步出栈
         if (s1.peek().equals(s2.peek())) {
             s2.pop();
         }

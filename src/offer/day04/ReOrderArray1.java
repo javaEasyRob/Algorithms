@@ -13,7 +13,7 @@ public class ReOrderArray1 {
     public void reOrderArray(int[] array) {
         int len = array.length;
         int t;
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < len - 1; i++) {
             for (int j = 0; j < len - 1 - i; j++) {
                 if ((array[j] & 1) == 0 && (array[j + 1] & 1) == 1) {
                     t = array[j];

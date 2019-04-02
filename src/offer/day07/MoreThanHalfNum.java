@@ -51,12 +51,20 @@ public class MoreThanHalfNum {
                 count--;
             }
         }
-        if (count > (len / 2)) {
-            return result;
-        } else {
-            return 0;
-        }
+        return checkMoreThanHalf(array, result);
     }
 
-
+    public int checkMoreThanHalf(int[] numbers, int result) {
+        int count = 0;
+        int len = numbers.length;
+        for (int number : numbers) {
+            if (number == result) {
+                count++;
+            }
+        }
+        if (count > (len >> 1)) {
+            return result;
+        }
+        return 0;
+    }
 }

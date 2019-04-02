@@ -31,11 +31,11 @@ public class Permutation {
             strs.add(String.valueOf(chars));
             return;
         }
-        for (int j = begin; j < len; j++) {
-            swap(chars, begin, j);
+        for (int i = begin; i < len; i++) {
+            swap(chars, begin, i);
             permutationHelper(strs, chars, begin + 1);
             //换回来进行下一轮置换。
-            swap(chars, begin, j);
+            swap(chars, begin, i);
         }
     }
 

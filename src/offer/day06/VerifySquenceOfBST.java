@@ -6,7 +6,7 @@ package offer.day06;
  * <p>输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历的结果。
  * 如果是则输出Yes,否则输出No。假设输入的数组的任意两个数字都互不相同。</p>
  * 思路<br>
- * <p>二叉搜索树中，右子树所有结点小于根节点，左子树所有结点大于根节点,而后序遍历
+ * <p>二叉搜索树中，右子树所有结点大于根节点，左子树所有结点小于根节点,而后序遍历
  * 顺序是左子树所有结点，然后右子树所有结点，最后为根节点。</p>
  *
  * @author 辛江勇
@@ -51,10 +51,10 @@ public class VerifySquenceOfBST {
         if (sequence.length == 0) {
             return false;
         }
-        return IsTreeBST(sequence, 0, sequence.length - 1);
+        return isTreeBST(sequence, 0, sequence.length - 1);
     }
 
-    public boolean IsTreeBST(int[] sequence, int start, int end) {
+    public boolean isTreeBST(int[] sequence, int start, int end) {
         //相等时为左子树只有一结点，为叶结点，小于时，说明左子树为空
         if (end <= start) {
             return true;
@@ -73,6 +73,6 @@ public class VerifySquenceOfBST {
             }
         }
         //继续递归左子树和右子树，直到为空或者为叶子节点
-        return IsTreeBST(sequence, start, i - 1) && IsTreeBST(sequence, i, end - 1);
+        return isTreeBST(sequence, start, i - 1) && isTreeBST(sequence, i, end - 1);
     }
 }

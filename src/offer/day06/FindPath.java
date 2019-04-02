@@ -1,11 +1,8 @@
 package offer.day06;
 
-import datastructure.tree.Examples;
-import datastructure.tree.Traversal;
 import datastructure.wheel.TreeNode;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * ClassName FindPath<br>
