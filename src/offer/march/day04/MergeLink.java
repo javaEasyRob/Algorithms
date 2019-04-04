@@ -7,7 +7,6 @@ package offer.march.day04;
  *
  * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45
  */
 public class MergeLink {
     public ListNode merge(ListNode list1, ListNode list2) {

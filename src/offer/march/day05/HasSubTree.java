@@ -9,7 +9,6 @@ package offer.march.day05;
  *
  * @author 辛江勇<br>
  * @version 1.0.0
- * @date 2018/10/20 20:45<br>
  */
 public class HasSubTree {
     public boolean hasSubtree(TreeNode root1, TreeNode root2) {

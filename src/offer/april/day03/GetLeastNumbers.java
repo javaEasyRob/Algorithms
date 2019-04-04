@@ -9,7 +9,6 @@ import java.util.Arrays;
  *
  * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45
  */
 public class GetLeastNumbers {
     public ArrayList<Integer> getLeastNumbers(int[] input, int k) {

@@ -19,7 +19,6 @@ package offer.april.day04;
  *
  * @author 辛江勇
  * @version 1.0.0
- * @date 2018/10/20 20:45
  */
 public class GetUglyNumber {
     public int getUglyNumber(int index) {
