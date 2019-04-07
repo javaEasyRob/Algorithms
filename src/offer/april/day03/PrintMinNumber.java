@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @version 1.0.0
  */
 public class PrintMinNumber {
-    public String printMinNumber(int[] numbers) {
+    public String printminnumber(int[] numbers) {
         StringBuilder str = new StringBuilder();
         ArrayList<Integer> list = new ArrayList<>();
         for (int number : numbers) {
