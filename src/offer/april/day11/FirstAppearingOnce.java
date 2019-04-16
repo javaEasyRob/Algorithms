@@ -14,7 +14,7 @@ package offer.april.day11;
  */
 public class FirstAppearingOnce {
     private int[] count = new int[256];
-    //Insert one char from stringstream
+    //insert one char from stringstream
     private int index = 1;
 
     public void insert(char ch) {
