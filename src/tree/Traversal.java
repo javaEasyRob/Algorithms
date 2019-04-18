@@ -1,7 +1,7 @@
-package datastructure.tree;
+package tree;
 
-import datastructure.wheel.SqQueue;
-import datastructure.wheel.TreeNode;
+import wheel.SqQueue;
+import wheel.TreeNode;
 
 import java.util.Stack;
 

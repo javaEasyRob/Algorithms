@@ -1,4 +1,4 @@
-package datastructure.wheel;
+package wheel;
 
 import java.util.Arrays;
 

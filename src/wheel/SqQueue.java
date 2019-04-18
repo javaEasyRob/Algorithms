@@ -1,4 +1,4 @@
-package datastructure.wheel;
+package wheel;
 
 /**
  * ClassName Queue<br>

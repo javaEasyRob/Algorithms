@@ -1,6 +1,6 @@
-package datastructure.tree;
+package tree;
 
-import datastructure.wheel.TreeNode;
+import wheel.TreeNode;
 
 /**
  * ClassName BSTProblems<br>
