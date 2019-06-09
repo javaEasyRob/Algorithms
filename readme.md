@@ -1,5 +1,5 @@
 # dataStructure (Java implementation)
-> 原来的 <a href="https://github.com/javaEasyRob/TheSwordToOffer">剑指offer - Java实现</a>模块已完成，特分类整理至其他仓库。
+> 原来的 <a href="https://github.com/javaEasyRob/TheSwordToOffer">剑指offer -Java实现</a>模块已完成，特分类整理至其他仓库。
 ## BinaryTree
 ### traversal 
 <ul>
