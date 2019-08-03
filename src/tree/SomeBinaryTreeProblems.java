@@ -105,25 +105,37 @@ public class SomeBinaryTreeProblems {
         if (pre.length != in.length) {
             return null;
         }
-        Map<Integer, Integer> map = new HashMap<>(in.length);
-        //快速得到元素的索引
-        int i = 0;
-        for (int number : in) {
-            map.put(number, i++);
+        Map<Integer, Integer> indexMap = new HashMap<>(in.length);
+        //以in中的值为键，值为in在数组中的索引。便于快速得到in中的值在数组中的位置
+        for (int i = 0; i < in.length; i++) {
+            indexMap.put(in[i], i);
         }
-        return reConstructBinaryTree(pre, 0, pre.length - 1, in, 0, in.length - 1, map);
+        return reConstructHelper(pre, 0, pre.length - 1, in, 0, in.length - 1, indexMap);
     }
 
-    private TreeNode reConstructBinaryTree(int[] pre, int preStart, int preEnd, int[] in, int inStart, int inEnd, Map<Integer, Integer> map) {
-        if (preEnd < preStart) {
+    private TreeNode reConstructHelper(int[] pre, int preStr, int preEnd,
+                                       int[] in, int inStr, int inEnd, Map<Integer, Integer> indexMap) {
+        //相等时表示头和尾相同，还有一个元素，因此选择小于
+        if (preEnd < preStr) {
             return null;
         }
-        TreeNode root = new TreeNode(pre[preStart]);
-        //根节点元素在中序序列中的位置
-        int index = map.get(pre[preStart]);
-        int leftLength = index - inStart;
-        root.left = reConstructBinaryTree(pre, preStart + 1, preStart + leftLength, in, inStart, index - 1, map);
-        root.right = reConstructBinaryTree(pre, preStart + leftLength + 1, preEnd, in, index + 1, inEnd, map);
+        TreeNode root = new TreeNode(pre[preStr]);
+        int index = indexMap.get(pre[preStr]);
+        int leftLength = index - inStr;
+        root.left = reConstructHelper(pre, preStr + 1, preStr + leftLength,
+                in, inStr, index - 1, indexMap);
+        root.right = reConstructHelper(pre, preStr + leftLength + 1, preEnd,
+                in, index + 1, inEnd, indexMap);
         return root;
+    }
+
+    public static void main(String[] args) {
+        int[] pre = new int[]{1,2,4,5,3,6,7};
+        int[] in = new int[]{4,2,5,1,6,3,7};
+        Traversal traversal = new Traversal();
+        SomeBinaryTreeProblems someBinaryTreeProblems = new SomeBinaryTreeProblems();
+        System.out.println("================先序遍历===================");
+        traversal.preOderTraversal(someBinaryTreeProblems.reConstructBinaryTree(pre, in));
+        System.out.println();
     }
 }

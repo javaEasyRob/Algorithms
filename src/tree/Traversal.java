@@ -22,7 +22,7 @@ public class Traversal {
     public void preOderTraversal(TreeNode root) {
         if (root != null) {
             //访问语句的放置顺序不同，对应不同的遍历方式
-            System.out.println(root.val);
+            System.out.print("\t" + root.val);
             preOderTraversal(root.left);
             //此时访问为inOrderTraversal
             preOderTraversal(root.right);
@@ -40,12 +40,13 @@ public class Traversal {
         while (root != null || !s.isEmpty()) {
             if (root != null) {
                 //此时为先序遍历
-                System.out.println(root.val);
+                //System.out.print("\t" + root.val);
                 s.push(root);
                 root = root.left;
             } else {
                 root = s.pop();
                 //此时为中序遍历
+                System.out.print("\t" + root.val);
                 root = root.right;
             }
         }
@@ -71,7 +72,7 @@ public class Traversal {
             root = stack.peek();
             //第三次访问
             if (root.right == null || root.right == lastVisit) {
-                System.out.println(root.val);
+                System.out.print("\t" + root.val);
                 lastVisit = root;
                 stack.pop();
                 root = null;
@@ -108,7 +109,7 @@ public class Traversal {
 
     /**
      * 测试遍历方法。
-     *  1
+     * 1
      * / \
      * 2   3
      * /\  /\
@@ -129,8 +130,19 @@ public class Traversal {
         node3.left = node6;
         node3.right = node7;
         Traversal traversal = new Traversal();
+        System.out.println("==================层次便利==================");
         traversal.levelTraversal(node1);
+        System.out.println("================先序遍历===================");
+        traversal.preOderTraversal(node1);
+        System.out.println();
+        System.out.println("================中序遍历===================");
+        traversal.inOrderTraversal(node1);
+        System.out.println();
+        System.out.println("================后序遍历===================");
         traversal.postOrderTraversal(node1);
+        System.out.println();
         SomeBinaryTreeProblems someBinaryTreeProblems = new SomeBinaryTreeProblems();
+        System.out.println("getHeight:\t" + someBinaryTreeProblems.getHeight(node1));
+        System.out.println("getHeight1:\t" + someBinaryTreeProblems.getHeight1(node1));
     }
 }
